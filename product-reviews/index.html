@@ -1,65 +1,80 @@
 <!DOCTYPE html>
 <html lang="en">
-  <!-- [Delete this comment] This file is the main file for the challenge. For the most part, you should be editing this file. -->
-  <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>Hero Section | GreatFrontEnd Projects</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,100..900;1,100..900&display=swap"
-      rel="stylesheet"
-    />
-    <link rel="stylesheet" href="css/style.css" />
+<!-- [Delete this comment] This file is the main file for the challenge. For the most part, you should be editing this file. -->
 
-    <!-- Tailwind CDN allows you to use Tailwind classes immediately in your HTML without any installation steps. 
-      If you're not using Tailwind, you may delete the <script> -->
-    <!-- Get started on Tailwind: https://tailwindcss.com/docs/installation/play-cdn -->
-    <script src="https://cdn.tailwindcss.com"></script>
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Hero Section | GreatFrontEnd Projects</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,100..900;1,100..900&display=swap"
+    rel="stylesheet" />
+  <link href="https://cdn.jsdelivr.net/npm/remixicon@4.3.0/fonts/remixicon.css" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css" />
 
-    <link rel="icon" href="img/favicon.ico" sizes="any" />
-  </head>
-  <body>
-    <div class="container">
-      <div class="overall-rating-col">
-        <h2>Overall Rating</h2>
-        <div class="overall-rating">
-          <span class="avg-rating"></span>
-          <!--stars-->
-          <span>Based on <span class="reviews-count">65</span> reviews</span>
-        </div>
-        <div class="reviews-percentages">
-          <div class="percentage-wrapper">
-            Excellent 
-            <div class="bar"></div>
-            <span class="excellent-percentage"></span>
-          </div>
-          <div class="percentage-wrapper good-wrapper">
-            Good
-            <div class="bar"></div>
-            <span class="good-percentage"></span>
-          </div>
-          <div class="percentage-wrapper average-wrapper">
-            Average
-            <div class="bar"></div>
-            <span class="average-percentage"></span>
-          </div>
-          <div class="percentage-wrapper below-average-wrapper">
-            Below Average
-            <div class="bar"></div>
-            <span class="below-average-percentage"></span>
-          </div>
-          <div class="percentage-wrapper poor-wrapper">
-            Poor
-            <div class="bar"></div>
-            <span class="poor-percentage"></span>
-          </div>
-        </div>
-        <button class="btn">Write a review</button>
+  <link rel="icon" href="img/favicon.ico" sizes="any" />
+</head>
+
+<body>
+  <div class="container">
+    <div class="col-sm">
+      <h2>Overall Rating</h2>
+      <div class="overall-rating">
+        <span id="avg-rating">4.1</span>
+        <!-- stars -->
+        <i class="ri-star-s-fill" style="color: yellow;"></i>
+        <i class="ri-star-s-fill" style="color: yellow;"></i>
+        <i class="ri-star-s-fill" style="color: yellow;"></i>
+        <i class="ri-star-s-fill" style="color: yellow;"></i>
+        <i class="ri-star-s-fill" style="color: yellow;"></i>
+        <span>Based on <span id="reviews-count">65</span> reviews</span>
       </div>
-      <div class="reviews-col"></div>
+      <div id="all-percentages-wrapper">
+        <div class="percentage-wrapper">
+          <span class="rating-category">Excellent</span>
+          <div class="bar excellent-bar"></div>
+          <span class="percentage" id="excellent-percentage">0%</span>
+        </div>
+        <div class="percentage-wrapper">
+          <span class="rating-category">Good</span>
+          <div class="bar good-bar"></div>
+          <span class="percentage" id="good-percentage">0%</span>
+        </div>
+        <div class="percentage-wrapper">
+          <span class="rating-category">Average</span>
+          <div class="bar average-bar"></div>
+          <span class="percentage" id="average-percentage">0%</span>
+        </div>
+        <div class="percentage-wrapper">
+          <span class="rating-category">Below Average</span>
+          <div class="bar below-average-bar"></div>
+          <span class="percentage" id="below-average-percentage">0%</span>
+        </div>
+        <div class="percentage-wrapper">
+          <span class="rating-category">Poor</span>
+          <div class="bar poor-bar"></div>
+          <span class="percentage" id="poor-percentage">0%</span>
+        </div>
+      </div>
+      <button id="write-review-btn" class="btn">Write a review</button>
     </div>
-    <script src="js/index.js"></script>
-  </body>
+    <div class="col-bg">
+      <div class="review-wrapper">
+        <div class="avatar"></div>
+        <span class="text-wrapper">
+          <p class="username">Samah</p>
+          <i class="ri-star-s-fill" style="color: yellow;"></i>
+          <i class="ri-star-s-fill" style="color: yellow;"></i>
+          <i class="ri-star-s-fill" style="color: yellow;"></i>
+          <i class="ri-star-s-fill" style="color: yellow;"></i>
+          <i class="ri-star-s-fill" style="color: yellow;"></i>
+
+        </span>
+      </div>
+    </div>
+  </div>
+  <script src="js/index.js"></script>
+</body>
+
 </html>
