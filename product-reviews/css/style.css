@@ -1,3 +1,63 @@
+:root {
+  /* Background and panel colors */
+  --background-color: #f8f9fa; /* Light gray for the background */
+  --panel-color: #ffffff;      /* White background for the review panel */
+  
+  /* Text colors */
+  --text-dark: #333333;        /* Dark text color */
+  --text-muted: #6c757d;       /* Muted gray text for dates and secondary text */
+  
+  /* Rating colors */
+  --rating-excellent: #4CAF50; /* Green for Excellent rating */
+  --rating-good: #8BC34A;      /* Lighter green for Good rating */
+  --rating-average: #FFEB3B;   /* Yellow for Average rating */
+  --rating-below-average: #FFC107; /* Amber for Below Average rating */
+  --rating-poor: #E0E0E0;      /* Gray for Poor rating */
+  
+  /* Star colors */
+  --star-filled: #FFC107;      /* Amber yellow for filled stars */
+  --star-empty: #E0E0E0;       /* Light gray for empty stars */
+  
+  /* Button */
+  --button-background: #ffffff; /* White button background */
+  --button-border: #E0E0E0;     /* Light gray border */
+  --button-text: #333333;       /* Dark text */
+}
+
+/*
+.modal-background {
+  background-color: var(--background-color);
+}
+
+.panel {
+  background-color: var(--panel-color);
+}
+
+.text-dark {
+  color: var(--text-dark);
+}
+
+.text-muted {
+  color: var(--text-muted);
+}
+
+.rating-excellent {
+  background-color: var(--rating-excellent);
+}
+
+.rating-good {
+  background-color: var(--rating-good);
+}
+
+.rating-average {
+  background-color: var(--rating-average);
+}
+
+.rating-below-average {
+  background-color: var(--rating-below-average);
+}
+*/
+
 body {
   padding: 0;
   margin: 0;
@@ -5,18 +65,61 @@ body {
     "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue",
     sans-serif;
   min-height: 100vh;
+  background: var(--background-color);
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 * {
   box-sizing: border-box;
 }
 
-.container {
-  display: flex;
-  justify-content: center;
-  align-items: start;
-  padding: 50px 0;
+
+/*
+Modal structure 
+header
+content (col-sm , col-lg) 
+*/
+
+.modal {
+  border-radius: 10px;
+  width: 85vw;
+  height: 95vh;
+  background: var(--panel-color);
 }
+
+.modal-header{
+  display: flex;
+  justify-content: end;
+  align-items: center;
+  height: 10%;
+  outline: 1px solid blue;
+}
+
+.modal-content{
+  display: flex;
+  align-items: start;
+  justify-content: center;
+}
+
+.col-sm{
+  width: 40%;
+  padding: 10px 15px;
+}
+
+.col-lg{
+  width: 60%;
+  padding: 10px 15px;
+}
+
+.col-sm, .col-lg{
+  outline: 1px solid red;
+}
+
+/*
+col-sm content 
+*/
 
 #all-percentages-wrapper{
   margin-bottom: 50px;
@@ -59,6 +162,44 @@ body {
   box-shadow: 0px 0px 1px 0.7px grey;
   cursor: pointer;
 }
+
+/*
+col-lg: reviews 
+*/
+
+.review-header{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.review-info{
+  display: flex;
+  align-items: center;
+}
+
+.avatar{
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background-color: black;
+}
+
+
+/* general styling*/
+.text{
+  color: var(--text-muted);
+}
+
+h2, h4{
+  color: var(--text-dark);
+}
+
+
+
+
+
+/* credits */
 
 .credits {
   color: #777;

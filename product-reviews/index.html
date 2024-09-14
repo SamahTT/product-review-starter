@@ -17,60 +17,79 @@
 </head>
 
 <body>
-  <div class="container">
-    <div class="col-sm">
-      <h2>Overall Rating</h2>
-      <div class="overall-rating">
-        <span id="avg-rating">4.1</span>
-        <!-- stars -->
-        <i class="ri-star-s-fill" style="color: yellow;"></i>
-        <i class="ri-star-s-fill" style="color: yellow;"></i>
-        <i class="ri-star-s-fill" style="color: yellow;"></i>
-        <i class="ri-star-s-fill" style="color: yellow;"></i>
-        <i class="ri-star-s-fill" style="color: yellow;"></i>
-        <span>Based on <span id="reviews-count">65</span> reviews</span>
-      </div>
-      <div id="all-percentages-wrapper">
-        <div class="percentage-wrapper">
-          <span class="rating-category">Excellent</span>
-          <div class="bar excellent-bar"></div>
-          <span class="percentage" id="excellent-percentage">0%</span>
-        </div>
-        <div class="percentage-wrapper">
-          <span class="rating-category">Good</span>
-          <div class="bar good-bar"></div>
-          <span class="percentage" id="good-percentage">0%</span>
-        </div>
-        <div class="percentage-wrapper">
-          <span class="rating-category">Average</span>
-          <div class="bar average-bar"></div>
-          <span class="percentage" id="average-percentage">0%</span>
-        </div>
-        <div class="percentage-wrapper">
-          <span class="rating-category">Below Average</span>
-          <div class="bar below-average-bar"></div>
-          <span class="percentage" id="below-average-percentage">0%</span>
-        </div>
-        <div class="percentage-wrapper">
-          <span class="rating-category">Poor</span>
-          <div class="bar poor-bar"></div>
-          <span class="percentage" id="poor-percentage">0%</span>
-        </div>
-      </div>
-      <button id="write-review-btn" class="btn">Write a review</button>
+  <div class="modal">
+    <div class="modal-header">
+      <i class="ri-close-line"></i>
     </div>
-    <div class="col-bg">
-      <div class="review-wrapper">
-        <div class="avatar"></div>
-        <span class="text-wrapper">
-          <p class="username">Samah</p>
+    <div class="modal-content">
+      <div class="col-sm">
+        <h2>Overall Rating</h2>
+        <div class="overall-rating">
+          <span id="avg-rating">4.1</span>
+          <!-- stars -->
           <i class="ri-star-s-fill" style="color: yellow;"></i>
           <i class="ri-star-s-fill" style="color: yellow;"></i>
           <i class="ri-star-s-fill" style="color: yellow;"></i>
           <i class="ri-star-s-fill" style="color: yellow;"></i>
           <i class="ri-star-s-fill" style="color: yellow;"></i>
+          <span>Based on <span id="reviews-count">65</span> reviews</span>
+        </div>
+        <div id="all-percentages-wrapper">
+          <div class="percentage-wrapper">
+            <span class="rating-category">Excellent</span>
+            <div class="bar excellent-bar"></div>
+            <span class="percentage" id="excellent-percentage">0%</span>
+          </div>
+          <div class="percentage-wrapper">
+            <span class="rating-category">Good</span>
+            <div class="bar good-bar"></div>
+            <span class="percentage" id="good-percentage">0%</span>
+          </div>
+          <div class="percentage-wrapper">
+            <span class="rating-category">Average</span>
+            <div class="bar average-bar"></div>
+            <span class="percentage" id="average-percentage">0%</span>
+          </div>
+          <div class="percentage-wrapper">
+            <span class="rating-category">Below Average</span>
+            <div class="bar below-average-bar"></div>
+            <span class="percentage" id="below-average-percentage">0%</span>
+          </div>
+          <div class="percentage-wrapper">
+            <span class="rating-category">Poor</span>
+            <div class="bar poor-bar"></div>
+            <span class="percentage" id="poor-percentage">0%</span>
+          </div>
+        </div>
+        <button id="write-review-btn" class="btn">Write a review</button>
+      </div>
 
-        </span>
+      <div class="col-lg">
+        <div class="review">
+          <div class="review-header">
+            <div class="review-info">
+              <img src="reviewer-profile.jpg" alt="Lilia McKnight" class="reviewer-photo">
+              <div class="reviewer-details">
+                <h4 class="reviewer-name">Lilia McKnight</h4>
+                <div class="review-rating">
+                  <span class="star">&#9733;</span>
+                  <span class="star">&#9733;</span>
+                  <span class="star">&#9733;</span>
+                  <span class="star">&#9733;</span>
+                  <span class="star">&#9733;</span>
+                </div>
+              </div>
+            </div>
+            <div class="review-date">
+              <p>May 26, 2024</p>
+            </div>
+          </div>
+          <div class="review-body">
+            <p>I've worn it everywhere, super durable and fashionable.</p>
+          </div>
+        </div>
+
+
       </div>
     </div>
   </div>
