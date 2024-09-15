@@ -12,16 +12,12 @@
   --rating-good: #8BC34A;      /* Lighter green for Good rating */
   --rating-average: #FFEB3B;   /* Yellow for Average rating */
   --rating-below-average: #FFC107; /* Amber for Below Average rating */
-  --rating-poor: #E0E0E0;      /* Gray for Poor rating */
+  --rating-poor: #e7621b;/* Gray for Poor rating */
+  --rating-bar: #E0E0E0;      
   
   /* Star colors */
   --star-filled: #FFC107;      /* Amber yellow for filled stars */
   --star-empty: #E0E0E0;       /* Light gray for empty stars */
-  
-  /* Button */
-  --button-background: #ffffff; /* White button background */
-  --button-border: #E0E0E0;     /* Light gray border */
-  --button-text: #333333;       /* Dark text */
 }
 
 /*
@@ -95,6 +91,7 @@ content (col-sm , col-lg)
   align-items: center;
   height: 10%;
   outline: 1px solid blue;
+  padding: 15px;
 }
 
 .modal-content{
@@ -149,7 +146,7 @@ col-sm content
 .bar{
   width: 180px;
   height: 10px;
-  background-color: #777;
+  background-color: var(--rating-bar);
   border-radius: 1.7em;
 }
 
@@ -157,10 +154,14 @@ col-sm content
   width: 150px;
   padding: 10px 15px;
   border-radius: 5px;
-  background-color: #ffffff;
+  background-color: var(--panel-color);
+  color: var(--text-dark);
   border: none;
-  box-shadow: 0px 0px 1px 0.7px grey;
   cursor: pointer;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+  font-family: "Noto Sans", system-ui, -apple-system, BlinkMacSystemFont,
+    "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue",
+    sans-serif;
 }
 
 /*
@@ -174,20 +175,43 @@ col-lg: reviews
 }
 
 .review-info{
+  outline: 1px solid red;
   display: flex;
+  justify-content: space-around;
   align-items: center;
 }
 
-.avatar{
-  width: 50px;
-  height: 50px;
+.reviewer-photo{
+  width: 55px;
+  height: 55px;
   border-radius: 50%;
   background-color: black;
 }
 
+#empty-reviews{
+  text-align: center;
+  padding-top: 80px;
+}
 
-/* general styling*/
-.text{
+.small-circle{
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  box-shadow: 0px 0px 7px 2px rgba(0, 0, 0, 0.06);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.disabled{
+  display: none;
+}
+
+
+/* text styling*/
+span, p{
   color: var(--text-muted);
 }
 
@@ -195,12 +219,16 @@ h2, h4{
   color: var(--text-dark);
 }
 
+h2{
+  font-size: 24px;
+}
 
-
+h4{
+  font-size: 16px;
+}
 
 
 /* credits */
-
 .credits {
   color: #777;
   position: fixed;
