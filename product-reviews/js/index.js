@@ -48,11 +48,11 @@ const poorPercentage = document.getElementById('poor-percentage');
 // Set percentages values 
 
 const percentages = {
-    excellent: 90,
-    good: 75,
-    average: 50,
-    below_average: 45,
-    poor: 20
+    excellent: 0,
+    good: 0,
+    average: 0,
+    below_average: 0,
+    poor: 0
 };
 
 // call functio 
